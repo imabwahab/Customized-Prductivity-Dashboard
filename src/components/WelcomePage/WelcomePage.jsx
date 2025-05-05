@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./WelcomePage.css"; // or use Tailwind / styled-components
 
 const WelcomePage = ({ onContinue }) => {
-  const [name, setName] = useState("");
+  const [name , setName ]= useState("");
   const [storedName, setStoredName] = useState("");
 
   useEffect(() => {
@@ -15,6 +15,12 @@ const WelcomePage = ({ onContinue }) => {
     localStorage.setItem("userName", name);
     setStoredName(name);
   };
+
+  const handleDelete = () => {
+    localStorage.removeItem("userName");
+    setStoredName(""); // Clear the state as well
+  };
+  
 
   return (
     <div className="welcome-container">
@@ -37,6 +43,9 @@ const WelcomePage = ({ onContinue }) => {
           <button className="enter-button" onClick={onContinue}>
             Enter Dashboard
           </button>
+
+          <button className="delete-button" onClick={handleDelete}>Delete Name</button>
+
         </div>
       )}
     </div>
