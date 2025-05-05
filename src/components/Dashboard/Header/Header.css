@@ -1,0 +1,44 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  padding: 1rem 1.5rem;
+  background-color: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  color: white;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+
+}
+
+.dashboard-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.clock {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .clock {
+    font-size: 0.95rem;
+  }
+}

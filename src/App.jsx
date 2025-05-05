@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
-
+import Dashboard from "./components/Dashboard/Dashboard";
 import "./App.css"; // Global styles or Tailwind CSS
 
 function App() {
@@ -8,13 +8,11 @@ function App() {
 
   return (
     <>
-      {/* {showDashboard ? (
+      {showDashboard ? (
         <Dashboard />
       ) : (
         <WelcomePage onContinue={() => setShowDashboard(true)} />
       )}
-      */}
-      <WelcomePage onContinue={() => setShowDashboard(true)} />
     </> 
   );
 }

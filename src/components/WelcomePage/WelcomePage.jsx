@@ -17,7 +17,7 @@ const WelcomePage = ({ onContinue }) => {
   };
 
   const handleDelete = () => {
-    localStorage.removeItem("userName");
+    localStorage.removeItem("userName");88888888888888888888888888888888
     setStoredName(""); // Clear the state as well
   };
   
