@@ -1,6 +1,6 @@
 /* Overall container */
 .welcome-container {
-  height: 88.3vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
