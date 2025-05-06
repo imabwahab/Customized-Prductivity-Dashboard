@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./WelcomePage.css"; // or use Tailwind / styled-components
+import React, { useState, useEffect } from "react";
+import "./WelcomePage.css"; 
 
-const WelcomePage = ({ onContinue }) => {
+const WelcomePage = ({ onContinue}) => {
+
+  
+
   const [name , setName ]= useState("");
   const [storedName, setStoredName] = useState("");
 
@@ -10,17 +13,19 @@ const WelcomePage = ({ onContinue }) => {
     if (savedName) setStoredName(savedName);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, value) => {
+    setName(value);
     e.preventDefault();
     localStorage.setItem("userName", name);
     setStoredName(name);
   };
 
   const handleDelete = () => {
-    localStorage.removeItem("userName");88888888888888888888888888888888
+    localStorage.removeItem("userName");
     setStoredName(""); // Clear the state as well
   };
   
+
 
   return (
     <div className="welcome-container">

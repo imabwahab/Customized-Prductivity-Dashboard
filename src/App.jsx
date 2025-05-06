@@ -6,14 +6,17 @@ import "./App.css";
 function App() {
   const [showDashboard, setShowDashboard] = useState(false);
 
+
   return (
     <>
       {showDashboard ? (
         <Dashboard />
       ) : (
-        <WelcomePage onContinue={() => setShowDashboard(true)} />
+        <WelcomePage
+          onContinue={() => setShowDashboard(true)}
+        />
       )}
-    </> 
+    </>
   );
 }
 

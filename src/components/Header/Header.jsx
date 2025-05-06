@@ -31,11 +31,16 @@ const Header = () => {
   // Fetch name from localStorage
   const name = localStorage.getItem("userName") || "Guest";
 
+  const handleDelete = () => {
+   console.log('delete clicked in header')
+  };
+
   return (
     <header className="dashboard-header">
       
         <h2>{getGreeting()}, {name} 👋</h2>
         <p className="clock">{formatTime(time)}</p>
+        <button className="delete-btn" onClick={handleDelete}>Delete Name</button>
         
     </header>
   );

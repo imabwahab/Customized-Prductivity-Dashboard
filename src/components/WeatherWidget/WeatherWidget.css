@@ -1,0 +1,18 @@
+.weather-widget {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  color: #f1f5f9;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  margin-left: 2rem;
+}
+
+p{
+  margin-left: 2rem;
+}
+.weather-widget img {
+  width: 64px;
+  height: 64px;
+}

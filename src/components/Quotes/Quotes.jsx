@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import "./Quotes.css"; 
+import "./Quotes.css"; // Keep your styles here
+
 const QuoteBox = () => {
   const [quote, setQuote] = useState("");
 
   useEffect(() => {
-    fetch("https://zenquotes.io/api/today")
+    fetch("https://dummyjson.com/quotes/random")
       .then((res) => res.json())
       .then((data) => {
-        const dailyQuote = `${data[0].q} — ${data[0].a}`;
-        setQuote(dailyQuote);
+        const freshQuote = `${data.quote} — ${data.author}`;
+        setQuote(freshQuote);
       })
       .catch((err) => {
         console.error("Error fetching quote:", err);

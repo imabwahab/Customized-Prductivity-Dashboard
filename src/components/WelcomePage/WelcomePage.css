@@ -102,5 +102,6 @@
 @media (max-width: 600px) {
   .welcome-container {
     height: 100vh;
+    
   }
 }
