@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './EntryComp.css'
+import style from './EntryComp.module.css'
 
 export const EntryComp = ({ onNewItem }) => {
 
@@ -25,8 +25,8 @@ export const EntryComp = ({ onNewItem }) => {
   };
 
   return (
-    <div className='container'>
-      <div className="TodoTask">
+    <div className={style.container}>
+      <div className={style.TodoTask}>
         <input
           type="text"
           className=""
@@ -37,7 +37,7 @@ export const EntryComp = ({ onNewItem }) => {
         />
       </div>
 
-      <div className="TodoDate">
+      <div className={style.TodoDate}>
         <input
           type="date"
           className=""
@@ -49,7 +49,7 @@ export const EntryComp = ({ onNewItem }) => {
 
         <button
           type="button"
-          className="button"
+          className={style.button}
           onClick={handleAddButtonClicked}
         >
           Add

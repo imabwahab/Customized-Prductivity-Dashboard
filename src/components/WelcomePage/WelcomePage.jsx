@@ -49,7 +49,7 @@ const WelcomePage = ({ onContinue}) => {
             Enter Dashboard
           </button>
 
-          <button className="delete-button" onClick={handleDelete}>Delete Name</button>
+          <button className="delete-button" onClick={handleDelete}>Delete User Name</button>
 
         </div>
       )}
